@@ -11,7 +11,7 @@ Este projeto permite converter arquivos .chart para .sng e vice-versa.
 
 - Windows 7 ou superior
 
-## O programa está com problemas
+## O programa está com problemas?
 
 - Verifique no Moonscraper Editor ou no arquivo da chart se ela contém o mp3 da música, o nome da música, e a banda, e depois tente converter novamente.
 
