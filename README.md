@@ -1,6 +1,6 @@
 # Conversor de Arquivos Chart/SNG
 
-Este projeto permite converter arquivos .chart para .sng e vice-versa. Você pode baixar o executável diretamente e utilizá-lo sem precisar instalar o Python.
+Este projeto permite converter arquivos .chart para .sng e vice-versa. 
 
 ## Como Usar
 
