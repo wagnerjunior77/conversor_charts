@@ -4,9 +4,8 @@ Este projeto permite converter arquivos .chart para .sng e vice-versa.
 
 ## Como Usar
 
-1. Baixe o arquivo `conversor.exe` da seção de releases.
-2. Execute o arquivo baixado.
-3. Use a interface gráfica para selecionar e converter seus arquivos.
+1. Execute o arquivo `conversor.exe`.
+2. Use a interface gráfica para selecionar e converter suas charts.
 
 ## Requisitos
 
