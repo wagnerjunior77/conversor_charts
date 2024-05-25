@@ -48,7 +48,7 @@ def convert_to_chart(xml_file, output_file):
     transformed_notes = transform_notes(notes, res)
     write_chart(transformed_notes, output_file, res)
 
-def getMs(pos, bpm_array_pos, bpm_array_val, resolution, arredondar=False):
+def getMs(pos, bpm_array_pos, bpm_array_val, resolution, arredondar=True):
     cur_ms = 0
     for i, value in enumerate(bpm_array_pos):
         bpm = bpm_array_val[i] / 1000
@@ -105,7 +105,7 @@ def convert_to_sng(chart_file, arredondar=False):
             end_tick = int(length)
             if dur.startswith("N"):
                 end_tick = int(length) + (int(dur.split(' ')[2]))
-            pos = round(getMs(int(end_tick), bpm_array_pos, bpm_array_val, resolution) + offset + 3, 3)
+            pos = round(getMs(int(end_tick), bpm_array_pos, bpm_array_val, resolution, arredondar) + offset + 3, 3)
             if pos > last_note_dur:
                 last_note_dur = pos
     length = last_note_dur
@@ -143,8 +143,8 @@ def convert_to_sng(chart_file, arredondar=False):
                     note = '0'
                 start_tick = int(key)
                 end_tick = start_tick + (int(split[2]))
-                pos = getMs(start_tick, bpm_array_pos, bpm_array_val, resolution)
-                duration = getMs(end_tick, bpm_array_pos, bpm_array_val, resolution) - pos
+                pos = getMs(start_tick, bpm_array_pos, bpm_array_val, resolution, arredondar)
+                duration = getMs(end_tick, bpm_array_pos, bpm_array_val, resolution, arredondar) - pos
                 if duration < 0.25:
                     duration = 0.0
                 special = 0
@@ -165,10 +165,6 @@ def convert_to_sng(chart_file, arredondar=False):
         text_file.write(out)
     return out_path
 
-    if arredondar:
-            # Arredonda para 24 bps
-            cur_ms = round(cur_ms * 24) / 24
-    return out_path
 
 def select_file():
     file_path = filedialog.askopenfilename()
