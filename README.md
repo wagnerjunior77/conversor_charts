@@ -12,7 +12,7 @@ Este projeto permite converter arquivos .chart para .sng e vice-versa.
 
 - Windows 7 ou superior
 
-##Extras
+## Extras
 
 Repositório apenas do conversor .chart para .sng: https://github.com/mc-chapis/chart2sng
 Repositório apenas do conversor .sng para .chart: https://github.com/naonemeu/sng2chart_py
