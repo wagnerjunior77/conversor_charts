@@ -60,7 +60,7 @@ def getMs(pos, bpm_array_pos, bpm_array_val, resolution, arredondar=False):
                 cur_ms = round(cur_ms * 24) / 24
             return cur_ms
 
-def convert_to_sng(chart_file):
+def convert_to_sng(chart_file, arredondar=False):
     with open(chart_file, 'r', encoding='utf-8') as file1:
         lines = file1.readlines()
     sections = {}
@@ -94,6 +94,7 @@ def convert_to_sng(chart_file):
                 if split_value.startswith("S 2"):
                     sp_split = split_value.split(' ')
                     star_power[split_key] = sp_split[2]
+    
 
     offset = float(sections["Song"]["Offset"])
     resolution = int(sections["Song"]["Resolution"])
@@ -164,6 +165,11 @@ def convert_to_sng(chart_file):
         text_file.write(out)
     return out_path
 
+    if arredondar:
+            # Arredonda para 24 bps
+            cur_ms = round(cur_ms * 24) / 24
+    return out_path
+
 def select_file():
     file_path = filedialog.askopenfilename()
     if file_path:
@@ -175,8 +181,10 @@ def select_file():
 def convert_chart_to_sng():
     file_path = select_file()
     if file_path:
-        output_path = convert_to_sng(file_path)
+        arredondar = messagebox.askyesno("Arredondar para 24 bps", "Você deseja arredondar para 24 bps?")
+        output_path = convert_to_sng(file_path, arredondar)
         messagebox.showinfo("Sucesso", f"Arquivo convertido e salvo em: {output_path}")
+    
 
 def convert_sng_to_chart():
     file_path = select_file()
