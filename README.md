@@ -11,7 +11,13 @@ Este projeto permite converter arquivos .chart para .sng e vice-versa.
 
 - Windows 7 ou superior
 
+## O programa está com problemas
+
+- Verifique no Moonscraper Editor ou no arquivo da chart se ela contém o mp3 da música, o nome da música, e a banda, e depois tente converter novamente.
+
 ## Extras
 
 1. Repositório apenas do conversor .chart para .sng: https://github.com/mc-chapis/chart2sng
 2. Repositório apenas do conversor .sng para .chart: https://github.com/naonemeu/sng2chart_py
+
+   
