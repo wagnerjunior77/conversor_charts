@@ -12,11 +12,7 @@ Este projeto permite converter arquivos .chart para .sng e vice-versa.
 
 - Windows 7 ou superior
 
-## Compilação
+##Extras
 
-Se você quiser compilar o executável você mesmo, siga os passos abaixo:
-
-1. Clone o repositório.
-2. Instale as dependências com `pip install pyinstaller`.
-3. Compile o executável com `pyinstaller --onefile --windowed --icon=icon.ico conversor.py`.
-4. O executável será criado na pasta `dist`.
+Repositório apenas do conversor .chart para .sng: https://github.com/mc-chapis/chart2sng
+Repositório apenas do conversor .sng para .chart: https://github.com/naonemeu/sng2chart_py
